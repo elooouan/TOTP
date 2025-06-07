@@ -4,7 +4,7 @@ import hmac, time, struct, hashlib
 
 # via https://datatracker.ietf.org/doc/html/rfc6238 -> tysm IETF
 def generate_totp(email):
-    key = (email + "HENNGECHALLENGE003").encode()
+    key = (email + "key_to_encode").encode()
     # print("bruh ", key)
     interval = int(time.time()) // 30
     # print(interval)
