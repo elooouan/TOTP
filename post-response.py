@@ -2,12 +2,12 @@ import requests
 import base64
 
 payload = {
-    "github_url": "https://gist.github.com/elooouan/dd07dabc0d2cc33885b8d005cfd6b6b6",
-    "contact_email": "elouan.duranton.mamadou@gmail.com",
+    "github_url": "",
+    "contact_email": "your_email_here",
     "solution_language": "python"
 }
 
-email = "elouan.duranton.mamadou@gmail.com"
+email = "your_email_here"
 totp = "0298980727" # don't forget to always replace this brah
 
 # Authorization header
@@ -15,7 +15,7 @@ auth_value = f"{email}:{totp}"
 auth_header = base64.b64encode(auth_value.encode()).decode() # ty stack overflow fr fr
 
 # POST request
-url = "https://api.challenge.hennge.com/challenges/003"
+url = "post_url"
 headers = {
     "Authorization": f"Basic {auth_header}",
     "Content-Type": "application/json"
