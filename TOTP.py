@@ -17,5 +17,5 @@ def generate_totp(email):
     code = (struct.unpack(">I", h[o:o+4])[0] & 0x7FFFFFFF) % (10 ** 10) # we want it unsigned and 10 digits long
     return f"{code:010d}"
 
-email = "elouan.duranton.mamadou@gmail.com"
+email = "your_email_here"
 print(generate_totp(email))
